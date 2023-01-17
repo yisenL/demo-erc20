@@ -12,15 +12,9 @@
 评分标准：每个数据类型计 1 分  
 参考资料： <https://docs.soliditylang.org/en/latest/types.html>
 
-## 答：
-- 布尔类型（bool）：用于存储true或false值。
-- 整型（int、uint）：用于存储带符号或无符号整数。
-- 字节数组（bytes、bytes32、bytes1-32）：用于存储二进制数据。
-- 字符串（string）：用于存储文本。
-- 地址类型（address）：用于存储以太坊地址。
-- 数组类型（数组）：用于存储多个相同类型的数据。
-- 结构体类型（struct）：用于存储多种不同类型的数据的集合。
-- 枚举类型（enum）：用于存储预定义的一组有名称的常量值。
+## 答
+
+- bool、int8、int256、uint256、fixed 、 ufixed、address、bytes、bytes32、bytes1-32、string、enum、数组
 
 ## 第 2 题：列举并测试以太坊的 JSONRPC API
 
@@ -38,7 +32,8 @@ curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainst
 
 ---
 
-## 答：
+## 答
+
 - eth_blockNumber：返回最新块的编号。
 
     ```shell
@@ -88,14 +83,15 @@ curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainst
 - 验证成功： 10 分，对过程要截图
 - 解释正确： 10 分
 
-## 答：
+## 答
+
 - GAS 费用取决于智能合约执行时需要执行的操作（例如存储数据、读取数据、进行计算等）的复杂度。如果同一合约中代码相同的函数所需要执行的操作不同，那么它们的 GAS 费用也可能不同。例如
   - 函数操作一样但是名称不同，那么GAS费会不一样
   - 调用函数时传入的参数不同，如果传入的参数需要消耗更多的 GAS 来执行，那么 GAS 费用就会增加。
   - 智能合约的状态不同，如果智能合约中的数据需要更多的 GAS 来读取或写入，那么 GAS 费用就会增加。
   - 网络状态不同，如果网络繁忙，那么 GAS 价格就会提高，导致 GAS 费用增加。
   - 执行函数时需要调用其他合约，那么 GAS 费用也会受到影响。
-- ![验证](https://s1.ax1x.com/2023/01/16/pSl4iNT.jpg)
+- ![验证](https://s1.ax1x.com/2023/01/17/pS1RM2d.jpg)
 
 ## 第 4 题：用 Remix 部署校验合约
 
